@@ -93,10 +93,10 @@ with detection_graph.as_default():
             (boxes, scores, classes, num_detections) = sess.run(
                 [boxes, scores, classes, num_detections],
                 feed_dict={image_tensor: image_np_expanded})
-            #If the score is greater than 50%, return true
-            cutoffPercent = 50
+            #If there are more than 1 objects, return true
+            cutoffPercent = 1
             while TFval == True: 
-                if (int(scores.lstrip('detection_scores:'))>cutoffPerecent): 
+                if (int(boxes.lstrip('detection_boxes:'))>=cutoffPerecent): 
                     TFval = True
                     print(TFval)
                     (not TFval).wait(5)
