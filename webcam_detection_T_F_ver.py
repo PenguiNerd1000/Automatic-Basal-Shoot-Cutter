@@ -95,9 +95,9 @@ with detection_graph.as_default():
                 feed_dict={image_tensor: image_np_expanded})
             #If the score is greater than 50%, return true
             cutoffPercent = 50
-            while TFval = True: 
+            while TFval == True: 
                 if (int(scores.lstrip('detection_scores:'))>cutoffPerecent): 
-                    TFval= True
+                    TFval = True
                     print(TFval)
                     (not TFval).wait(5)
 
