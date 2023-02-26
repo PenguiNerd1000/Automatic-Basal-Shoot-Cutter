@@ -5,15 +5,16 @@ import sys
 import tarfile
 import tensorflow as tf
 import zipfile
+import time
 
 from collections import defaultdict
 from io import StringIO
 from matplotlib import pyplot as plt
 from PIL import Image
 
-from utils import label_map_util
+from object_detection.utils import label_map_util
 
-from utils import visualization_utils as vis_util
+from object_detection.utils import visualization_utils as vis_util
 
 import cv2
 
@@ -93,10 +94,18 @@ with detection_graph.as_default():
                 [boxes, scores, classes, num_detections],
                 feed_dict={image_tensor: image_np_expanded})
             #If the score is greater than 50%, return true
-            if (int(boxes.lstrip('detection_scores:'))>50): 
-                return True
-            else:
-                return False
+            cutoffPercent = 50
+            while TFval = True: 
+                if (int(scores.lstrip('detection_scores:'))>cutoffPerecent): 
+                    TFval= True
+                    print(TFval)
+                    (not TFval).wait(5)
+
+                else:
+                    TFval = False
+                    print(TFval)
+                    time.sleep(5)
+
             # Visualization of the results of a detection.
             vis_util.visualize_boxes_and_labels_on_image_array(
                 image_np,
