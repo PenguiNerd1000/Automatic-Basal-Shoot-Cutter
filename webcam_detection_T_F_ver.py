@@ -94,9 +94,10 @@ with detection_graph.as_default():
                 [boxes, scores, classes, num_detections],
                 feed_dict={image_tensor: image_np_expanded})
             #If there are more than 1 objects, return true
-            cutoffPercent = 1
+            activationBool = 1
+            # TFval is true/false value
             while TFval == True: 
-                if (int(boxes.lstrip('detection_boxes:'))>=cutoffPerecent): 
+                if (int(boxes.lstrip('detection_boxes:'))>=activationBool): 
                     TFval = True
                     print(TFval)
                     (not TFval).wait(5)
