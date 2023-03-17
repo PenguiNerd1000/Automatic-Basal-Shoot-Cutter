@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>IMG_1548.jpeg</filename>
+	<path>D:\Semester Project\automatic_basal_shoot_cutter\images\train\IMG_1548.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>jenga</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1269</xmin>
+			<ymin>341</ymin>
+			<xmax>1719</xmax>
+			<ymax>1654</ymax>
+		</bndbox>
+	</object>
+</annotation>
