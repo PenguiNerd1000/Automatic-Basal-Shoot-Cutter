@@ -1,31 +1,19 @@
 Automatic Basal Shoot Cutter
 
-LINUX
-Install Ubuntu 22.04.1-live-server-amd64
+Raspberry Pi 4b
+Rasbian OS 32-bit, bullseye, Armv7l 
 
 Git clone labelImg
 https://github.com/heartexlabs/labelImg 
 
 Gathered images from KingPLeather
-Used LabelImg to gather xml
+Used LabelImg to gather get data in PASCAL VOC format
 
 TFlite model maker
+https://www.tensorflow.org/lite/models/modify/model_maker/object_detection
+https://colab.research.google.com/github/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/models/modify/model_maker/object_detection.ipynb 
 
 sudo pip3 install TFlite
-sudo pip3 install TFlite-model-maker
 sudo pip3 install TFlite-support
-
-Import openCV-headless
-
-virtualenv.exe venv3
-pip install opencv-python
-pip install tensorflow-intel
-
-
-
-sudo apt update
-sudo apt install python3-dev python3-pip python3-venv
-sudo apt-get install python3-opencv
-
-python3 -m venv virtualenv
-source virtualenv/bin/activate
+sudo pip3 install opencv-python
+sudo pip3 install gstreamer-player
